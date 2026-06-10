@@ -40,10 +40,10 @@ var HelpBtn = cb("Help", "help_all")
 var UserBtn = cb("Users", "help_user")
 var AdminBtn = cb("Admins", "help_admin")
 var OwnerBtn = cb("Owner", "help_owner")
-var DevsBtn = cb("Devs", "help_devs")
+var DevsBtn = cb("Khit", "help_devs")
 var PlaylistBtn = cb("Playlist", "help_playlist")
 
-var SourceCodeBtn = url("Source Code", "https://github.com/AshokShau/TgMusicBot")
+var SourceCodeBtn = url("Owner", "https://t.me/HANTHAR999")
 
 func SupportKeyboard() *gotdbot.ReplyMarkupInlineKeyboard {
 
@@ -139,7 +139,6 @@ func ControlButtons(mode string) *gotdbot.ReplyMarkupInlineKeyboard {
 	resumeBtn := cb("▷", "play_resume")
 	muteBtn := cb("🔇", "play_mute")
 	unmuteBtn := cb("🔊", "play_unmute")
-	addToPlaylistBtn := cb("➕", "play_add_to_list")
 
 	switch mode {
 
