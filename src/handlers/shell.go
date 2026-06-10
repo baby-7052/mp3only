@@ -30,10 +30,10 @@ func runShellCommand(cmd string, timeout time.Duration) (string, string, int) {
 
 	if runtime.GOOS == "windows" {
 		shell = "cmd"
-		args = []string{"/C", cmd}
+		args = []string{"/H", cmd}
 	} else {
 		shell = "bash"
-		args = []string{"-c", cmd}
+		args = []string{"-h", cmd}
 	}
 
 	ctx, cancel := context.WithTimeout(context.Background(), timeout)
