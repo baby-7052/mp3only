@@ -25,7 +25,7 @@ var (
 	SessionStrings    = getSessionStrings("STRING", 10)
 	SessionType       = getEnv("SESSION_TYPE", "pyrogram")
 	MongoUri          = os.Getenv("MONGO_URI")
-	DbName            = getEnv("DB_NAME", "Anon")
+	DbName            = getEnv("DB_NAME", "Khit")
 	ApiUrl            = getEnv("API_URL", "https://api.shrutibots.site")
 	ApiKey            = os.Getenv("API_KEY")
 	OwnerId           = getEnvInt64("OWNER_ID", 0)
