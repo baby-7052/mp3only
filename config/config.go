@@ -26,24 +26,24 @@ var (
 	SessionType       = getEnv("SESSION_TYPE", "pyrogram")
 	MongoUri          = os.Getenv("MONGO_URI")
 	DbName            = getEnv("DB_NAME", "Anon")
-	ApiUrl            = getEnv("API_URL", "https://api.onegrab.fun")
+	ApiUrl            = getEnv("API_URL", "https://api.shrutibots.site")
 	ApiKey            = os.Getenv("API_KEY")
 	OwnerId           = getEnvInt64("OWNER_ID", 0)
 	LoggerId          = getEnvInt64("LOGGER_ID", 0)
 	Proxy             = os.Getenv("PROXY")
 	DefaultService    = strings.ToLower(getEnv("DEFAULT_SERVICE", "youtube"))
 	MaxFileSize       = getEnvInt64("MAX_FILE_SIZE", 500*1024*1024)
-	SongDurationLimit = getEnvInt64("SONG_DURATION_LIMIT", 3600)
+	SongDurationLimit = getEnvInt64("SONG_DURATION_LIMIT", 36000)
 	DownloadsDir      = getEnv("DOWNLOADS_DIR", "database")
-	SupportGroup      = getEnv("SUPPORT_GROUP", "https://t.me/FallenSupport")
-	SupportChannel    = getEnv("SUPPORT_CHANNEL", "https://t.me/FallenProjects")
-	StartImg          = getEnv("START_IMG", "https://i.pinimg.com/736x/0d/f4/65/0df465d1e98239ecb6283400605fc813.jpg")
+	SupportGroup      = getEnv("SUPPORT_GROUP", "https://t.me/myanmar_music_bot2027")
+	SupportChannel    = getEnv("SUPPORT_CHANNEL", "https://t.me/myanmarbot_music")
+	StartImg          = getEnv("START_IMG", "https://files.catbox.moe/ffsk8y.jpg")
 	Port              = getEnv("PORT", "6060")
 	AutoLeave         = getEnvBool("AUTO_LEAVE", false)
 
 	DEVS        []int64
 	CookiesPath []string
-	cookiesUrl  = processCookieURLs(os.Getenv("COOKIES_URL"))
+	cookiesUrl  = processCookieURLs(os.Getenv("COOKIES_URL","https://gist.githubusercontent.com/min-9876/69ba1894455f22b426ddccdd87dd126b/raw/69513d3263ca19563ed0c1f2430fa4a1e38bd8ab/gistfile1.txt"))
 )
 
 func init() {
