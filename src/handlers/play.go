@@ -185,7 +185,7 @@ func handleMedia(c *td.Client, m *td.Message, updater *td.Message, dlMsg *td.Mes
 		escName := html.EscapeString(saveCache.Name)
 		escUser := html.EscapeString(saveCache.User)
 		queueInfo := fmt.Sprintf(
-			"<u><b>Added to queue: %d</b></u>\n\n<b>Title:</b> <a href='%s'>%s</a>\n\n<b>Duration:</b> %s min\n<b>Requested by:</b> %s",
+			"<u><b>Added to queue: %d</b></u>\n<blockquote><b>𝗧ɪᴛʟᴇ ➪</b> <a href='%s'>%s</a>\n<b>𝗧ɪᴍᴇ ➪</b> %s min\n<b>𝗥ᴇǫᴜᴇsᴛᴇʀ ➪</b> %s</blockquote>",
 			qLen, escURL, escName, utils.SecToMin(saveCache.Duration), escUser,
 		)
 		_, err := updater.EditText(c, queueInfo, &td.EditTextMessageOpts{ReplyMarkup: core.ControlButtons("play"), ParseMode: "HTML", DisableWebPagePreview: true})
@@ -218,7 +218,7 @@ func handleMedia(c *td.Client, m *td.Message, updater *td.Message, dlMsg *td.Mes
 	escUser := html.EscapeString(saveCache.User)
 
 	nowPlaying := fmt.Sprintf(
-		"<u><b>| Started streaming</b></u>\n\n<b>Title:</b> <a href='%s'>%s</a>\n\n<b>Duration:</b> %s min\n<b>Requested by:</b> %s",
+		"<u><b>|Now Playing </b></u>\n<blockquote><b>𝗧ɪᴛʟᴇ ➪</b> <a href='%s'>%s</a>\n<b>𝗧ɪᴍᴇ ➪</b> %s min\n<b>𝗥ᴇǫᴜᴇsᴛᴇʀ ➪</b> %s</blockquote>",
 		escURL, escName, utils.SecToMin(saveCache.Duration), escUser,
 	)
 
@@ -286,7 +286,7 @@ func handleSingleTrack(c *td.Client, m *td.Message, updater *td.Message, song ut
 		escName := html.EscapeString(saveCache.Name)
 		escUser := html.EscapeString(saveCache.User)
 		queueInfo := fmt.Sprintf(
-			"<u><b>Added to queue: %d</b></u>\n\n<b>Title:</b> <a href='%s'>%s</a>\n\n<b>Duration:</b> %s min\n<b>Requested by:</b> %s",
+			"<u><b>Added to queue: %d</b></u>\n<blockquote><b>Title:</b> <a href='%s'>%s</a>\n\n<b>Duration:</b> %s min\n<b>Requested by:</b> %s</blockquote>",
 			qLen, escURL, escName, utils.SecToMin(saveCache.Duration), escUser,
 		)
 
@@ -316,7 +316,7 @@ func handleSingleTrack(c *td.Client, m *td.Message, updater *td.Message, song ut
 	escUsernp := html.EscapeString(saveCache.User)
 
 	nowPlaying := fmt.Sprintf(
-		"<u><b>| Started streaming</b></u>\n\n<b>Title:</b> <a href='%s'>%s</a>\n\n<b>Duration:</b> %s min\n<b>Requested by:</b> %s",
+		"<u><b>| Now Playing </b></u>\n<blockquote><b>Title:</b> <a href='%s'>%s</a>\n\n<b>Duration:</b> %s min\n<b>Requested by:</b> %s</blockquote>",
 		escURLnp, escNamenp, utils.SecToMin(song.Duration), escUsernp,
 	)
 
